@@ -1,12 +1,33 @@
 <html>
-<head><title>Enrolled Students</title></head>
-<body>
-<h1>Enrolled Students</h1>
-<ul>
-{% for Courses in courseStudetList %}
-	<li>{{ Courses.Student_Name }}, </li>
-{% endfor %}
- </ul>
- </body>
- </html>
+<head>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'design1_CS361.css' %}" />
+    <meta charset="UTF-8">
+    <title>courses</title>
+<style>
 
+</style>
+</head>
+<body>
+<h1>courses</h1>
+    <table border="1" style="width:100%">
+
+    <thead>
+
+        <th>Name</th>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+        <ul>{% for courses in courseStudetList %}</ul>
+        <td>{{ courses.Student_Name }}</td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+
+</table>
+</body>
+</html>
