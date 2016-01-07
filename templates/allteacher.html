@@ -1,0 +1,39 @@
+<html>
+<head>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'design1_CS361.css' %}" />
+    <meta charset="UTF-8">
+    <title>teacher</title>
+<style>
+
+</style>
+</head>
+<body>
+<h1>Teacher</h1>
+    <table border="1" style="width:100%">
+
+    <thead>
+
+        <th>Name</th>
+        <th>SurName</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Office</th>
+    </thead>
+
+    <tbody>
+
+        <tr>
+        <ul>{% for Teacher in Teacherlist %}</ul>
+        <td>{{ Teacher.Teacher_Name }}</td>
+        <td>{{ Teacher.Teacher_LastName }}</td>
+        <td>{{ Teacher.Teacher_Email }}</td>
+        <td>{{ Teacher.Teacher_Phone }}</td>
+        <td>{{ Teacher.Teacher_Office }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+
+</table>
+</body>
+</html>
